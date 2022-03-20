@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+    width: fit-content;
+    border: 2px dashed brown;
+    background-color: bisque;
+    color: azure;
+    font-style: oblique;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
