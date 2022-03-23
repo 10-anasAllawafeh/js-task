@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+div{
+    border: 2px solid black;
+    width: 30%;
+    /* text-align: ; */
+    /* display: grid; */
+    /* align-items: ;
+    justify-content: start; */
+    
+}
+div p{
+    width: 25%;
+    display: grid-inline;
+}
+h1{
+    background-color: grey;
+}
+
+
