@@ -161,9 +161,138 @@ console.log ('Here is : ', 'array');
 //     console.log(minInArray(3,7,9,5,2,1,0));
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //15
+// function removeFromArray(...nums) {
+//     for (let i = 0; i < nums.length; i++) {
+//         nums.splice(2,1);
+//         console.log(nums);
+//     }
+// }
+// console.log(removeFromArray(1,3,5,7,9,2,4,6,8,1,3,5,4,6,2,17,));
+///////////////////////////////////////////////////
+// function removeFromArray(...nums) {
+//     let i = 0;
+//     while (i < nums.length) {
+//         nums.splice(2,1);
+//         console.log(nums);
+//         i++;
+//     }
+// }
+// console.log(removeFromArray(1,3,5,7,9,2,4,6,8,1,3,5,4,6,2,17,));
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//16
+// let odds=[];
+// function oddArray(...nums) {
+//     for (let i = 0; i < nums.length; i++) {
+//             if (nums[i] % 2 !==0) {
+//                 odds.push(nums[i]); 
+//             }  
+//     } return odds;
+// }
+// console.log(oddArray(1,3,5,7,9,2,4,6,8,1,3,5,4,6,2,17));
+///////////////////////////////////////////////////
+// function oddArray(...nums) {
+//     let i = 0;
+//     let odds=[];
+//     while ( i < nums.length) {
+//         if (nums[i] % 2 !==0) {
+//             odds.push(nums[i]); 
+//         }   i++; 
+//     }return odds;
+// }
+// console.log(oddArray(1,3,5,7,9,2,4,6,8,1,3,5,4,6,2,17));
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//17
+// function aveArray(...nums) {
+//     let sum=0;
+//     for (let i = 0; i < nums.length; i++) {
+//         sum= sum+nums[i];
+//     } return sum/nums.length;
+// }
+// console.log(aveArray(1,3,5,7,9,2,4,6,8,1,3,5,4,6,2,17));
+///////////////////////////////////////////////////
+// function aveArray(...nums) {
+//     let sum=0;
+//     let i = 0;
+//     while (i < nums.length) {
+//         sum= sum+nums[i];
+//         i++;    
+//     }return sum/nums.length;
+// }
+// console.log(aveArray(1,3,5,7,9,2,4,6,8,1,3,5,4,6,2,17));
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//18
+// function shorterInArray(...str) {
+//     for (let i = 0; i < str.length; i++) {
+//         shorter=str.reduce(function(a, b) {return a.length <= b.length ? a : b;});
+//     }   return shorter;
+// }
+// console.log(shorterInArray("ahmed","emad","ali","suhaib","sameer","laith","moyad"));
+///////////////////////////////////////////////////
+// function shorterInArray(...str) {
+//     let i = 0;
+//     while (i < str.length) {
+//         shorter=str.reduce(function(a, b) {return a.length <= b.length ? a : b;});
+//         i++;
+//     }  return shorter;
+// }
+// console.log(shorterInArray("ahmed","emad","ali","suhaib","sameer","laith","moyad"));
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//19
+// function repeatChar(str) {
+//     console.log(str.length);
+//     char=0;
+//     for (let i = 0; i < str.length; i++) { 
+//         if (str[i] === "a") {
+//             char++;
+//         }        
+//     }
+//     return char
+// }
+// console.log(repeatChar("ahmed emad ali suhaib sameer laith moyad"));
+///////////////////////////////////////////////////
+// function repeatChar(str) {
+//     console.log(str.length);
+//     char=0;
+//     let i = 0;
+//     while ( i < str.length) { 
+//         if (str[i] === "a") {
+//             char++;
+//         }   
+//         i++;     
+//     }
+//     return char
+// }
+// console.log(repeatChar("ahmed emad ali suhaib sameer laith moyad"));
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//20
+// function evenIndexOddLength(...str) {
+//     let oddArray=[];
+//     for (let i = 0; i < str.length; i++) {
+//         if (i % 2 === 0) {
+//             if (str[i].length % 2 != 0) {
+//                 oddArray.push(str[i])
+//             }
+//         }
+//     } return oddArray;
+// }
+// console.log(evenIndexOddLength("ahmed","emad","ali","suhaib","samer","laith","moyad"));
+///////////////////////////////////////////////////
+// function evenIndexOddLength(...str) {
+//     let oddArray=[];
+//     let i = 0;
+//     while (i < str.length) {
+//         if (i % 2 === 0) {
+//             if (str[i].length % 2 != 0) {
+//                 oddArray.push(str[i]);
+//             }
+//         }
+//         i++;  
+//     } return oddArray;
+// }
+// console.log(evenIndexOddLength("ahmed","emad","ali","suhaib","samer","laith","moyad"));
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//21
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
