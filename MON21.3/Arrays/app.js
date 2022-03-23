@@ -69,8 +69,6 @@ console.log ('Here is : ', 'array');
 //     }
     
 // }
-
-
 // console.log(middleOfArray(1,8,9,33,55,10,4,54,63));
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 //9
@@ -88,9 +86,6 @@ console.log ('Here is : ', 'array');
 //10
 // function indexOfArray(a,b,c,d,...nums) {
 //     return `index of Array is: ${nums[1]}`;
-    
-
-    
 // }
 // console.log(indexOfArray(5,7,9,6,4,8,9,6,5,2,4,7));
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -98,10 +93,8 @@ console.log ('Here is : ', 'array');
 // function arrayExceptLast(...nums) {
 //     console.log(nums);
 //     console.log(nums.slice(0,nums.length-1));
-//     return `array Except Last : ${nums.slice(0,nums.length-1)}`;
-    
+//     return `array Except Last : ${nums.slice(0,nums.length-1)}`; 
 // }
-
 // console.log(arrayExceptLast(2,5,4,3,6,9,1,7,0));
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //12
@@ -109,8 +102,6 @@ console.log ('Here is : ', 'array');
 //     console.log(nums);
 //     console.log(nums.splice(nums.length,0,2,3));
 //     return `array addToEnd : ${nums.splice(nums.length,0,2,3)}`;
-
-    
 // }
 // console.log(addToEnd(2,5,4,3,6,9,1,7,0));
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -134,7 +125,6 @@ console.log ('Here is : ', 'array');
 //           return sum;
 //     }
 //     console.log(sumArray(1,7,6,5,9,4,5));
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //14
 // function minInArray(...nums) {
@@ -292,9 +282,50 @@ console.log ('Here is : ', 'array');
 // console.log(evenIndexOddLength("ahmed","emad","ali","suhaib","samer","laith","moyad"));
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //21
-
+// function powerElementIndex(...nums) {
+//     let poarray=[];
+//     for (let i = 0; i < nums.length; i++) {
+//         nums[i]=Math.pow(nums[i], i);
+//         poarray.push(nums[i]);
+//     } return poarray;
+// }
+// console.log(powerElementIndex(5,3,5,7,9,2,4,6,8,1,3,5,4,6,2,3));
+///////////////////////////////////////////////////
+// function powerElementIndex(...nums) {
+//     let poarray=[];
+//     let i = 0;
+//     while (i < nums.length) {
+//         nums[i]=Math.pow(nums[i], i);
+//         poarray.push(nums[i]);
+//         i++;
+//     } return poarray;
+// }
+// console.log(powerElementIndex(5,3,5,7,9,2,4,6,8,1,3,5,4,6,2,3));
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+//22
+// function evenNumberEvenIndex(...nums) {
+//     let evenarray=[];
+//     for (let i = 0; i < nums.length; i++) {
+//         if (i % 2 === 0) {
+//             if (nums[i] % 2 ===0) {
+//                 evenarray.push(nums[i]);   
+//             } 
+//         }  
+//     } return evenarray
+// }
+// console.log(evenNumberEvenIndex(5,3,5,7,9,2,4,6,8,1,3,5,4,6,2,3));
+///////////////////////////////////////////////////
+// function evenNumberEvenIndex(...nums) {
+//     let evenarray=[];
+//     let i = 0;
+//     while ( i < nums.length ) {
+//         if (i % 2 === 0) {
+//             if (nums[i] % 2 ===0) {
+//                 evenarray.push(nums[i]);   
+//             } 
+//         }  i++;
+//     } return evenarray
+// }
+// console.log(evenNumberEvenIndex(5,3,5,7,9,2,4,6,8,1,3,5,4,6,2,3));
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+//////DONE///////////DONE//////////DONE///////DONE/////////DONE///////////DONE/////////DONE//////////DONE/////////DONE/////////DONE///////
