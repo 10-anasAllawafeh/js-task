@@ -118,16 +118,19 @@
 // }
 // console.log(smallerNubmer(x,y,z));
 ////////////////////////////////////////////////////////////////////////////////////////////
-//13**************************
-// function shorterString(st1,st2,st3,st4,st5) {   
-//     return shorterString.reduce((a, b) => a.length <= b.length ? a : b)
+//13
+// function shorterString(...str) { 
+//     shorter=str.reduce(function(a, b) {return a.length <= b.length ? a : b;})  
+//     return shorter;
 // }
 // console.log(shorterString("Anas","Obada","Ammar","Ali","Samer"));
-
 ////////////////////////////////////////////////////////////////////////////////////////////
 //14**************************
-// function longerString(...st) {   
+// function longerString(...str) { 
+//     longer=str.reduce(function(a, b) {return a.length >= b.length ? a : b;})  
+//     return longer;
 // }
+// console.log(longerString("Anas","Obada","Ammar","Samer"));
 ////////////////////////////////////////////////////////////////////////////////////////////
 //15
 // function isEven(x) {
@@ -203,11 +206,28 @@
 //     }
 // }
 ////////////////////////////////////////////////////////////////////////////////////////////
-//23**************************************************
-
-
+//23
+// function counter(nums) {
+//     for (let i = 0; i <= 5; i++) {
+//         nums=i;
+//         console.log(nums); 
+//     }
+// }
+// console.log(counter(0));
 ////////////////////////////////////////////////////////////////////////////////////////////
-//24**************************************************
+//24
+// function counter(nums) {
+//     for (let i = 0; i <= 3; i++) {
+//         nums=i;
+//         console.log(nums); 
+//         if (nums===3) {
+//             console.log("and the counter reset now ");
+//             i=0;
+//             break;
+//         }
+//     }
+// }
+// console.log(counter(0));
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////
