@@ -1,6 +1,7 @@
 `use strict`;
 function task(num) {
     document.write(`task ${num} <br>`);
+    console.log(`task ${num}`);
 }
 function hline() {
     document.write(`<br> <hr>`);
@@ -17,22 +18,20 @@ task(1);
 //   ** Search on MDN about something can cut the string to words??
 
 // console.log(str.split(" "));
-//   Ex: repeatWord("My name is alex mercer class name B baba mama hello Hello HELLO")
-  function repeatword() {
+//   Ex: repeatWord("My name is alex mercer class name B my baba mama hello Hello HELLO") 
+function repeatword() {
     str="My name is alex mercer class name B my baba mama hello Hello HELLO";
-    y=str.split(new RegExp(" ", "gi"));
+    y=str.toLowerCase().split(" ");
     x="";
     sum=0;
     for (let z = 0; z < y.length; z++) {
           y[z];
         for (let i = 0; i < y.length; i++) {
             if (y[z] == y[i]) {
-                sum= sum + 1;
-    
-                  
+                sum= sum + 1;   
             }
         }
-    return `${y[2]}:${sum}`;
+    return `${y[11]}:${sum}<br>`;
     }
     
 }console.log(repeatword());
@@ -80,8 +79,29 @@ hline();
   Ex: repeatChar("mamababatetacedo")
   => { m:2,  a:5, b:2, t2:, e:2, c:1, d:1, o:1}
   */
-  
-  
+ task(2)
+//  str="My name is alex mercer class name B my baba mama hello Hello HELLO";
+//  y1=str.toLowerCase().replace().split("");
+  function repeatChar(x1) {
+    // str="My name is alex mercer class name B my baba mama hello Hello HELLO";
+    x1="";
+    y1=x1.toLowerCase().replace(/\s/g, '');
+    sum1=0;
+    for (let z = 0; z < y1.length; z++) {
+          y1[z];
+        for (let i = 0; i < y1.length; i++) {
+            if (y1[z] == y1[i]) {
+                sum1= sum1 + 1;   
+            }
+        }
+    return `${y1[0]}:${sum1}<br>`;
+    }
+    
+}
+console.log(repeatChar("My name is alex mercer class name B my baba mama hello Hello HELLO"));
+document.write(repeatChar());
+console.log(y1);
+
   /*
   9
   Create a function called selectFromObject
@@ -143,9 +163,9 @@ hline();
   task(4)
 
   y={
-        name:"Daua",
-        age: 24,
-        skill:["html","css","js"],
+    name:"Daua",
+    age: 24,
+    skill:["html","css","js"],
     }
     x=Object.keys(y);
   function objectToArray() {
@@ -154,9 +174,18 @@ hline();
     }  
   }
   console.log(objectToArray());
-  document.write(objectToArray())
+  console.log(Array.isArray(x));
+  document.write(objectToArray());
+  document.getElementById("p1").innerHTML=x;
   hline();
-  
+  ////////////////
+  task(4.1);
+
+  let xa= Object.keys(y);
+  let ya= Object.values(y);
+//   console.log(typeof(ya));
+  let za= xa.concat(ya);
+  console.log(za);
   /*
   11
   Create a function called arrayToObject
@@ -189,6 +218,9 @@ hline();
   let data={firstName:["Moh"],age:[24]};
   console.log(getObject(arrayToObject(data)));
   document.write(getObject(arrayToObject(data)));
+
+  //////
+  
   /*
   12
   Create a function called onlyNumber
@@ -199,7 +231,18 @@ hline();
   Ex: onlyNumber({firstName:"Moh",age:24,movies:[1,5,"string"]})
   => {age:24}
   */
-  
+ task(7);
+  onlyNumber={firstName:"Moh",age:24,movies:[1,5,"string"]};
+  console.log(typeof(onlyNumber));
+  function onlyNumbers() {
+      x={};
+      for (let i = 0; i < 3 ; i++) {
+          if (onlyNumber.keys == Number || onlyNumber.values == Number) {
+              x=new onlyNumber(onlyNumber.keys[i]);
+          } 
+      } return x;
+  }
+console.log(onlyNumbers());
 
   
   /*
@@ -224,7 +267,19 @@ hline();
   Ex: onlyArray({firstName:"Moh",age:24,movies:[1,5,"string"]})
   => {movies:[1,5,"string"]}
   */
-  
+ task(9)
+
+  onlyArray={firstName:"Moh",age:24,movies:[1,5,"string"]};
+  yt=Object.values(onlyArray);
+  function yttype(){
+      x=[];
+    for (let i = 0; i < yt.length; i++) {
+      if(typeof(yt[i]) === "object");{
+        x.push(yt[i])
+      } 
+    } return x ;
+  }
+console.log(yttype());
   
   /*
   15
@@ -236,6 +291,7 @@ hline();
   => ['firstName', 'age', 'movies']
   
   */
+ task(10);
   function getArray(object) {
     return Object.keys(object).reduce(function (r, k) {
         object[k].forEach(function (a, i) {
