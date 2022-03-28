@@ -4,21 +4,24 @@ let ulItem=document.getElementById("order");
 let banana=[];///1
 let price=Math.ceil(Math.random() * (15 - 3) + 3);
 
+function storeInLocalStorage(){
+    let stringArray=JSON.stringify(banana);
+    localStorage.setItem("data",stringArray);
+}
 
 function callFromLocalStorage(){
-    let dataObj=localStorage.getItem(banana[i].cusName);
+    let dataObj=localStorage.getItem("data");
     // console.log(dataObj,"typeOf dataObj ",typeof dataObj);
 
-    let arrayString=JSON.parse(dataObj);
-    console.log(arrayString,"arrayString");
-    if(arrayString != null){
-        banana=arrayString;
+    let omar=JSON.parse(dataObj);
+    console.log(omar,"omar");
+    if(omar != null){
+        banana=omar;
         // renderOrder(); 
     }
    renderOrder(); 
 }
-
-
+callFromLocalStorage();
 
 
 
@@ -33,6 +36,7 @@ function Coffee(cusName,cupSize,milkType,isHot,drinkType,price){
       
 
     banana.push(this);
+    storeInLocalStorage();
     renderOrder();
     console.log(banana);
 }
@@ -66,12 +70,13 @@ formOrder.addEventListener("submit",handleSubmit);
 
  function renderOrder(){
     //  ulItem.textContent="";
-    let liElement=document.createElement("li");
-        let parElement=document.createElement("p");
-     let hot;
+    ulItem.textContent="";
 
      for (let i = 0; i < banana.length; i++) {
-        
+    let liElement=document.createElement("li");
+    let parElement=document.createElement("p");
+     let hot;
+
         ulItem.appendChild(liElement);
         liElement.appendChild(parElement);
         
@@ -83,7 +88,7 @@ formOrder.addEventListener("submit",handleSubmit);
 
         parElement.textContent=`the customer ${banana[i].cusName} has ordered the following: ${banana[i].cupSize}.oz with ${banana[i].milkType} milk. He prefare it ${hot} with ${banana[i].drinkType}. the price will be ${Math.ceil(Math.random() * (15 - 3) + 3)} `;
         // window.localStorage.setItem([banana[i].cupSize.key],[banana[i].cupSize.value]);
-        localStorage.setItem(banana[i].cusName, JSON.stringify(banana));
+        // localStorage.setItem(banana[i].cusName, JSON.stringify(banana));
         // localStorage.setItem("users", JSON.stringify(users));
 
 

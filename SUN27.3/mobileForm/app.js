@@ -1,7 +1,8 @@
 `use strict`
 let formDiv= document.getElementById("mobForm");
-let thElement=document.getElementById("headTa")
+let thElement=document.getElementById("headTa");
 let tbElement=document.getElementById("boadTa");
+let userfor=[];
 
 ////////////////////////////////////////////////////////////////////////////
 // let trElement = document.createElement("tr");
@@ -22,7 +23,7 @@ let tbElement=document.getElementById("boadTa");
 // tdElement3.textContent = `condition`;
 /////////////////////////////////////////////////////////////////////////////
 
-let userfor=[];
+
 
 /////////////////////////////////////////////////////////////////////////////
 // function storeInLocalStorage(){
@@ -116,6 +117,9 @@ formDiv.addEventListener("submit",handleSubmit);
       tdElement1.textContent = userfor[i].typeNameD;
       tdElement2.textContent = userfor[i].price;
       tdElement3.textContent = userfor[i].cond;
+
+      localStorage.setItem(userfor[i].useName, JSON.stringify(userfor));
+      localStorage.getItem(userfor[i].useName);
     }
     //  return this.cusName+"has ordered "+this.drinkType
   }
