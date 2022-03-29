@@ -108,7 +108,7 @@ locElement.addEventListener("submit", function(event){
     let responce= await fetch(`https://eu1.locationiq.com/v1/search.php?key=pk.5fdf7554df7d097ac56a7287ed04a614&q=${x}&format=json`);
     let data= await responce.json();
     console.log(data[0]);
-    locpara.innerHTML=`City name is :${data[0].display_name.split(",",2)} || Longitude is :${data[0].lon} || latitude is:${data[0].lat}`;
+    locpara.innerHTML=`City name is :${data[0].display_name.split(",",2)}<br> || Longitude is :${data[0].lon}<br> || latitude is:${data[0].lat}`;
     document.querySelector(`#img`).src=data[0].icon
 };
 

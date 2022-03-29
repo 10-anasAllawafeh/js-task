@@ -1,7 +1,11 @@
 `use strict`;
+console.log ('Here is : ', 'array');
 function task(num) {
-    // document.write(`task ${num} <br>`);
+    document.write(`task ${num} <br>`);
     console.log(`task ${num}`);
+}
+function hline() {
+    document.write(`<br> <hr>`);
 }
 /*
 1
@@ -13,6 +17,7 @@ Ex: subtract(2); => 2 - 1 - 0 => 1
 Ex: subtract(5); => 5 - 4 - 3 - 2 - 1 - 0 => -5
 Ex: subtract(9); => 9 - 8 - 7 - 6 - 5 - 4 - 3 - 2 - 1 - 0 => -27
 */
+task(1);
 console.log('Here is : While');
 //1console.log(subtract(5))
 task(1);
@@ -24,6 +29,8 @@ function subtract(n,s) {
     } console.log(s);
 }
 console.log(subtract(5,0));
+document.write(subtract(5,0));
+hline();
 // console.log("////////Or/////////");
 // function subtract(num) {
 //     while (num > 0) {
@@ -50,6 +57,8 @@ function factorial(n,s) {
     } console.log(s);
 }
 console.log(factorial(4,0));
+document.write(factorial(4,0));
+hline();
 /*
 3
 Create a function called repeatStr
@@ -69,6 +78,7 @@ function repeatStr(n,s) {
     } console.log(s);
 }
 console.log(repeatStr(3,"to"));
+document.write(repeatStr(3,"to"));
 //////////////////////////////////////////////
 // console.log("////////Or/////////");
 function repeat(pattern, count) {
@@ -81,6 +91,8 @@ function repeat(pattern, count) {
     return result + pattern;
 }
 console.log(repeat(" to",2));
+document.write(repeat(" to",2));
+hline();
 /*
 4
 Create a function called sum2
@@ -110,6 +122,8 @@ function sum2(array){
     return total;
 } 
 console.log(sum2(range([])));
+document.write(sum2(range([])));
+hline();
 
 
 /*
@@ -136,6 +150,8 @@ function repeatStr2(pattern,numb) {
     return result + pattern;
 }
 console.log(repeatStr2(" to","hii"));
+document.write(repeatStr2(" to","hii"));
+hline();
 /*
 6
 Create a function called multiOf
@@ -154,6 +170,8 @@ function multiof(x,y,z) {
     }   
 }
 console.log(multiof(2,2,3));
+document.write(multiof(2,2,3));
+hline();
 /*
 7
 Create a function called muti2
@@ -183,6 +201,8 @@ function multi2(array){
     return total;
 } 
 console.log(multi2(range([3,6])));
+document.write(multi2(range([3,6])));
+hline();
 /*
 8
 Create a function called numberBetweenUs
@@ -205,6 +225,8 @@ function numberBetweenUs(x,y) {
    } return s;
 }
 console.log(numberBetweenUs(2,8));
+document.write(numberBetweenUs(2,8));
+hline();
 /*
 9
 Write a function called countDown
@@ -237,6 +259,8 @@ function countDown(n) {
     } return s;
 }
 console.log(countDown(5));
+document.write(countDown(5));
+hline();
 /*
 10
 Write a function called multiplication2
@@ -254,6 +278,8 @@ function multiplication2(x,y){
     }return x * y;
 }
 console.log(multiplication2(2,5));
+document.write(multiplication2(2,5));
+hline();
 /*
 11
 Write a function called mod2
@@ -272,6 +298,8 @@ function mod2(x,y) {
     } return (x - y * parseInt(x / y));
 }
 console.log(mod2(7,4));
+document.write(mod2(7,4));
+hline();
 /*
 12
 Write a function called repeatChar
@@ -301,4 +329,4 @@ function repeatChar(str) {                                    //****************
 }                                                                            //************************************************
                                                                       //************************************************
 console.log(repeatChar('school'));
-                                                                          //************************************************
+document.write(repeatChar('school'));                                                                   //************************************************
