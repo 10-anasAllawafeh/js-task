@@ -52,7 +52,14 @@ function phone(useName,typeNameD){
     this.useName=useName;
     this.typeNameD=typeNameD;
     this.price=priceMob(50,500);
-    this.cond=conditon();
+    let x;
+    if (this.price <= 100) {
+        x= `used Mobile`;
+    } 
+    else {
+        x= `new Mobile`;
+    };
+    this.cond= x;
       
 
     userfor.push(this);
@@ -64,15 +71,15 @@ function priceMob(min,max){
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-function conditon() {
-    let price=phone.price;
-    if (price <= 100) {
-        return `used Mobile`;
-    } 
-    else {
-        return `new Mobile`;
-    }
-}
+// function conditon() {
+//     let price=phone.price;
+//     if (price <= 100) {
+//         return `used Mobile`;
+//     } 
+//     else {
+//         return `new Mobile`;
+//     }
+// }
 
 ////////////////////////////////////////////////////////////////////////////////
 formDiv.addEventListener("submit",handleSubmit);
