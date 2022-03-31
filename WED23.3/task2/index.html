@@ -2,13 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Changing colors</title>
+    <title>Exercise #2: Changing colors</title>
+    <style>
+        #dv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <div id="d" onclick="color(this)" style="width:200px ; height:200px ; background-color:blue"></div>
+<div id="dv"></div>
 </body>
-<script src="app.js"></script>
+
+<script>
+
+
+let color = document.getElementById("dv");
+color.style.backgroundColor = "blue";
+
+let colors = [ "blue","red" ,"green" ];
+let change = 0;
+color.addEventListener('click', function onclick()
+{
+color.style.backgroundColor = colors[change]; 
+change = change >= 2 ? 0 : change +1 ;
+
+})
+
+</script>
 </html>

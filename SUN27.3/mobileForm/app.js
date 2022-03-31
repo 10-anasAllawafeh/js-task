@@ -26,24 +26,25 @@ let userfor=[];
 
 
 /////////////////////////////////////////////////////////////////////////////
-// function storeInLocalStorage(){
-//     let stringArray=JSON.stringify(userfor);
-//     localStorage.setItem("data",stringArray);
-// }
+function storeInLocalStorage(){
+    let stringArray=JSON.stringify(userfor);
+    console.log(stringArray);
+    localStorage.setItem("data",stringArray);
+}
 
-// function callFromLocalStorage(){
-//     let dataObj=localStorage.getItem("data");
-//     // console.log(dataObj,"typeOf dataObj ",typeof dataObj);
+function callFromLocalStorage(){
+    let dataObj=localStorage.getItem("data");
+    // console.log(dataObj,"typeOf dataObj ",typeof dataObj);
 
-//     let arrayString=JSON.parse(dataObj);
-//     console.log(arrayString,"arrayString");
-//     if(arrayString != null){
-//         userfor=arrayString;
-//         // renderOrder(); 
-//     }
-//    renderOrder(); 
-// }
-// callFromLocalStorage();
+    let arrayString=JSON.parse(dataObj);
+    // console.log(arrayString,"arrayString");
+    if(arrayString != null){
+        userfor=arrayString;
+        // renderOrder(); 
+    }
+    renderType(); 
+}
+callFromLocalStorage();
 ////////////////////////////////////////////////////////////////////////////////
 
 
@@ -61,9 +62,10 @@ function phone(useName,typeNameD){
     };
     this.cond= x;
       
-
+    
     userfor.push(this);
     renderType();
+    storeInLocalStorage();
     console.log(userfor);
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -125,8 +127,8 @@ formDiv.addEventListener("submit",handleSubmit);
       tdElement2.textContent = userfor[i].price;
       tdElement3.textContent = userfor[i].cond;
 
-      localStorage.setItem(userfor[i].useName, JSON.stringify(userfor));
-      localStorage.getItem(userfor[i].useName);
+    //   localStorage.setItem(userfor[i].useName, JSON.stringify(userfor));
+    //   localStorage.getItem(userfor[i].useName);
     }
     //  return this.cusName+"has ordered "+this.drinkType
   }

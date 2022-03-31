@@ -3,11 +3,12 @@ let formDiv= document.getElementById("mobForm");
 let thElement=document.getElementById("headTa");
 let tbElement=document.getElementById("boadTa");
 let locName=document.getElementById("locName").value;
-let userfor=[];
+let userform=[];
+///////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////
 function storeInLocalStorage(){
-    let stringArray=JSON.stringify(userfor);
+    let stringArray=JSON.stringify(userform);
     localStorage.setItem("data",stringArray);
 }
 
@@ -18,12 +19,12 @@ function callFromLocalStorage(){
     let arrayString=JSON.parse(dataObj);
     console.log(arrayString,"arrayString");
     if(arrayString != null){
-        userfor=arrayString;
+        userform=arrayString;
         // renderOrder(); 
     }
     renderType(); 
 }
-callFromLocalStorage();
+
 // ///////////////////////////////////////////////////////////////////////////
 function phone(useName,typeNameD){
     this.useName=useName;
@@ -38,9 +39,10 @@ function phone(useName,typeNameD){
     };
     this.cond= x;
     
-    userfor.push(this);
+    userform.push(this);
     renderType();
-    console.log(userfor);
+    storeInLocalStorage();
+    console.log(userform);
 }
 ////////////////////////////////////////////////////////////////////////////////
 function priceMob(min,max){
@@ -67,26 +69,27 @@ formDiv.addEventListener("submit",function(event){
 //  handleSubmit();
 
  function renderType() {
+    // tbElement.textContent="";
     let trElement = document.createElement("tr");
     let tdElement4 = document.createElement("td");
     let tdElement1 = document.createElement("td");
     let tdElement2 = document.createElement("td");
     let tdElement3 = document.createElement("td");
   
-    for (let i = 0; i < userfor.length; i++) {
+    for (let i = 0; i < userform.length; i++) {
       tbElement.appendChild(trElement);
       trElement.appendChild(tdElement4);
       trElement.appendChild(tdElement1);
       trElement.appendChild(tdElement2);
       trElement.appendChild(tdElement3);
   
-      tdElement4.textContent = userfor[i].useName;
-      tdElement1.textContent = userfor[i].typeNameD;
-      tdElement2.textContent = userfor[i].price;
-      tdElement3.textContent = userfor[i].cond;
+      tdElement4.textContent = userform[i].useName;
+      tdElement1.textContent = userform[i].typeNameD;
+      tdElement2.textContent = userform[i].price;
+      tdElement3.textContent = userform[i].cond;
 
-      localStorage.setItem(userfor[i].useName, JSON.stringify(userfor));
-    //   localStorage.getItem(userfor[i].useName);
+    //   localStorage.setItem(userform[i].useName, JSON.stringify(userform));
+    //   localStorage.getItem(userform[i].useName);
     }
     //  return this.cusName+"has ordered "+this.drinkType
   }
@@ -111,6 +114,8 @@ locElement.addEventListener("submit", function(event){
     locpara.innerHTML=`City name is :${data[0].display_name.split(",",2)}<br> || Longitude is :${data[0].lon}<br> || latitude is:${data[0].lat}`;
     document.querySelector(`#img`).src=data[0].icon
 };
+
+callFromLocalStorage();
 
 
 
